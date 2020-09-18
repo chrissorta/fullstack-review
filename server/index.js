@@ -18,10 +18,15 @@ app.post('/repos', function (req, res) {
   console.log(req.body);
   axios.get(`https://api.github.com/users/${req.body.term}/repos`)
     .then((results) => {
-      for(let i = 0; i < results.data.length; i++) {
-        console.log(results.data[i].name)
+      for (let i = 0; i < results.data.length; i++) {
+        console.log(results.data[i].name);
 
       }
+      console.log('Success in server');
+      res.status(200).send();
+    })
+    .catch((results) => {
+      console.log(results);
     })
 });
 
