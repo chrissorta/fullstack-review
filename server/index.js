@@ -28,7 +28,7 @@ app.post('/repos', function (req, res) {
           updated_At: repo.updated_at,
           description: repo.description,
           forks: repo.forks,
-          url: repo.url,
+          url: repo.clone_url,
           owner_id: repo.owner.id
         }
 

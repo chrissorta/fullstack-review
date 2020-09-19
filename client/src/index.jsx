@@ -44,8 +44,8 @@ class App extends React.Component {
       <Search onSearch={this.search.bind(this)}/>
       {this.state.repos.map((repo) =>
        <div>
-        <div>{repo.name}</div>
-        <div>{repo.url}</div>
+        <div><a href={repo.url} target="_blank">{repo.name}</a></div>
+        {/* <div>{repo.url}</div> */}
         </div>
       )}
     </div>)
